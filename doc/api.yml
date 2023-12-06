@@ -1,0 +1,23 @@
+openapi: 3.0.0
+info:
+  title: API Documentation
+  version: 1.0.0
+paths:
+  /new-prime:
+    get:
+      summary: Retrieve a new prime number
+      description: Returns a randomly generated odd prime number.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                number: 17
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              example:
+                error: An error occurred while generating the prime number.
+      deprecated: false
